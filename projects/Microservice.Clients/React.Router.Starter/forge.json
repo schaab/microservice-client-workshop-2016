@@ -10,11 +10,11 @@
     ],
     "serviceModules": [
         {
-            "MicroserviceName": "/serviceProxies/HomeDepot.Platform.Samples.FunnyQuote.Microservice",
-            "Version": "1.0.1-build-5",
+            "MicroserviceName": "/serviceProxies/Quotes.Microservice",
+            "Version": "1.0.0",
             "Entities": [
                 {
-                    "Name": "funnyQuote.js"
+                    "Name": "quote.js"
                 }
             ]
         },

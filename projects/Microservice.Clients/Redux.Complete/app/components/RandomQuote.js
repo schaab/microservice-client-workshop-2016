@@ -1,5 +1,4 @@
 import React, {Component, PropTypes} from 'react';
-import FunnyQuote from '../common/js/forge/services/funnyQuote';
 import Quote from './Quote';
 
 export default class RandomQuote extends Component{

@@ -10,8 +10,8 @@ export default class RandomQuote extends Component{
         }
     }
     getRandomQuote = () => {
-        FunnyQuote.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
-        FunnyQuote.getRandomQuote().then(quote => {
+        Quote.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
+        Quote.getRandomQuote().then(quote => {
             // TODO: Set the quote property of state to the value that comes back
         });
     };

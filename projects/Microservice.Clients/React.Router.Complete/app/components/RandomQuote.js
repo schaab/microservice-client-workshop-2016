@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import FunnyQuote from '../common/js/forge/services/funnyQuote';
+import QuoteService from '../common/js/forge/services/quote';
 import Quote from './Quote';
 
 export default class RandomQuote extends Component{
@@ -12,8 +12,8 @@ export default class RandomQuote extends Component{
         }
     }
     getRandomQuote = () => {
-        FunnyQuote.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
-        FunnyQuote.getRandomQuote().then(quote => {
+        QuoteService.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
+        QuoteService.getRandomQuote().then(quote => {
             this.setState({quote: quote});
         });
     };

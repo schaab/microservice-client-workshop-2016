@@ -1,8 +1,5 @@
-/**
- * Created by bpalmquist on 6/23/2016.
- */
 import React, { Component } from 'react';
-import FunnyQuote from '../common/js/forge/services/funnyQuote';
+import QuoteService from '../common/js/forge/services/quote';
 import Quote from './Quote';
 
 export default class QuoteList extends Component{
@@ -10,11 +7,11 @@ export default class QuoteList extends Component{
         quotes: []
     };
     componentWillMount(){
-        FunnyQuote.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
-        FunnyQuote.getAll().then((quotes) => {
+        QuoteService.setOptions({ baseUri: 'http://dev-forge.api.hdquotecenter.com' });
+        QuoteService.getAll().then((quotes) => {
             const items = [];
             quotes.forEach((quote) => {
-                const key = `quote_item_${quote.Id}`;
+                const key = `quote_item_${quote.id}`;
                 items.push(<li key={key} className="list-group-item">{Quote(quote)}</li>);
             });
 

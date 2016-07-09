@@ -29,16 +29,16 @@
 <script src="http://dev-forge.api.hdquotecenter.com/serviceProxySupport/notifications.js"></script>
 <script src="http://dev-forge.api.hdquotecenter.com/serviceProxySupport/ajaxOptions.js"></script>
 <script src="http://dev-forge.api.hdquotecenter.com/serviceProxySupport/promise.js"></script>
-<script src="http://dev-forge.api.hdquotecenter.com/serviceProxies/HomeDepot.Platform.Samples.FunnyQuote.Microservice/1.0.1-build-5/funnyQuote.js"></script>
+<script src="http://dev-forge.api.hdquotecenter.com/serviceProxies/Quotes.Microservice/1.0.0/quote.js"></script>
 <script src="http://dev-forge.api.hdquotecenter.com/serviceProxies/HomeDepot.Platform.Identity.Microservice/1.0.1-build-7/token.js"></script>
 <script>
     function getAllQuotes() {
-        FunnyQuote.setOptions({baseUri: 'http://dev-forge.api.hdquotecenter.com'});
-        FunnyQuote.getAll().then(function (quotes) {
+        Quote.setOptions({baseUri: 'http://dev-forge.api.hdquotecenter.com'});
+        Quote.getAll().then(function (quotes) {
             var ul = document.getElementById("quoteList");
             quotes.forEach(function (q) {
                 var li = document.createElement("li");
-                li.innerText = q.Text;
+                li.innerHTML ="<div><h4>" + q.text + "</h4><h6><i>" + "- " + q.author + "</i></h6></div>";
                 li.className = 'list-group-item';
                 ul.appendChild(li);
             })
