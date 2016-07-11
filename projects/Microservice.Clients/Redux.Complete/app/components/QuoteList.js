@@ -25,8 +25,8 @@ export default class QuoteList extends Component{
 
     const content = items.length > 0 ? (<ul style={{marginTop: '10px'}} className="list-group">{items}</ul>) : (<div>{Loading('Loading quote list...')}</div>);
     return (<div className="container-fluid">
-        <span style={{marginBottom: '5px'}}>
-            <button tooltip="Reload Quote List" style={{display: 'inline', verticalAlign: 'middle'}} onClick={this.loadQuotes} className='btn btn-primary'><i className='fa fa-refresh' ></i></button>
+        <span>
+            <button title="Reload Quote List" style={{display: 'inline', verticalAlign: 'middle', marginRight: '7px'}} onClick={this.loadQuotes} className='btn btn-primary'><i className='fa fa-refresh' ></i></button>
             <h2 style={{display: 'inline', verticalAlign: 'middle'}}>All Quotes</h2>
         </span>
         {content}
