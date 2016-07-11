@@ -19,7 +19,7 @@ export default class App extends Component {
                 break;
             }
             case 'Quotes': {
-                content = (<QuoteList/>)
+                content = (<QuoteList/>);
                 break;
             }
             default:{
